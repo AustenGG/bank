@@ -1,3 +1,4 @@
+
 describe('Balance', function() {
 
    var bank;
