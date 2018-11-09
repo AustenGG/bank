@@ -30,8 +30,9 @@ describe('Balance', function() {
    });
 
    it('Adds a transaction type to the transactions array', function() {
-     bank.addTransactions("Deposit")
-     expect(bank.getTransactions()).toEqual(["Deposit"]);
+     bank.addTransactions("Deposit", "09112018")
+     expect(bank.getTransactions()).toEqual(["Transaction method: Deposit -- Date: 09112018 -- Balance: £100"]);
    });
-   
+
+
  });

@@ -2,7 +2,7 @@
 
 function Bank() {
    this.balance = 100;
-   this.transactions = []
+   this.Transactions = [];
  }
 
   Bank.prototype.getCurrentBalance = function() {
@@ -18,13 +18,15 @@ function Bank() {
 
   Bank.prototype.statement = function() {
      var balance = this.balance;
-     return "--STATMENT-- Current balamce: " + balance
+     return "--STATMENT-- Current balamce: " + balance;
   }
 
   Bank.prototype.getTransactions = function() {
-    return this.transactions;
+    return this.Transactions;
   };
 
-  Bank.prototype.addTransactions = function(transactionType) {
-    this.transactions.push(transactionType)
+  Bank.prototype.addTransactions = function(transactionType, date) {
+    var currentB = this.balance;
+    this.Transactions.push("Transaction method: " + transactionType + " -- Date: " + date + " -- Balance: " + "£" + currentB);
+
   };
