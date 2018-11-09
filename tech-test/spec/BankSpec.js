@@ -20,4 +20,9 @@ describe('Balance', function() {
      expect(bank.getCurrentBalance()).toEqual(90);
    });
 
+   it('Prints Statement', function() {
+     bank.statement();
+     expect(bank.statement()).toEqual("--STATMENT-- Current balamce: 100");
+   });
+
  });
