@@ -25,4 +25,13 @@ describe('Balance', function() {
      expect(bank.statement()).toEqual("--STATMENT-- Current balamce: 100");
    });
 
+   it('Has empty transactions array as default', function() {
+     expect(bank.getTransactions()).toEqual([]);
+   });
+
+   it('Adds a transaction type to the transactions array', function() {
+     bank.addTransactions("Deposit")
+     expect(bank.getTransactions()).toEqual(["Deposit"]);
+   });
+   
  });
