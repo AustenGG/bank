@@ -7,6 +7,6 @@ describe('Balance', function() {
    });
 
    it('starts at 100 ', function() {
-     expect(bank.balance).toEqual(100);
+     expect(bank.getCurrentBalance()).toEqual(100);
    });
  });
