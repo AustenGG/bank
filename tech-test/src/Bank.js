@@ -12,7 +12,7 @@ function Bank() {
      this.balance += value;
   }
 
-  Bank.prototype.withdrawl = function(value) {
+  Bank.prototype.withdrawal = function(value) {
      this.balance -= value;
   }
 
@@ -25,8 +25,22 @@ function Bank() {
     return this.Transactions;
   };
 
-  Bank.prototype.addTransactions = function(transactionType, date) {
+  Bank.prototype.addTransactions = function(transactionType) {
     var currentB = this.balance;
-    this.Transactions.push("Transaction method: " + transactionType + " -- Date: " + date + " -- Balance: " + "£" + currentB);
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd = '0'+dd
+    }
+
+    if(mm<10) {
+        mm = '0'+mm
+    }
+    today = dd + '/' + mm + '/' + yyyy;
+
+    this.Transactions.push("Transaction method: " + transactionType + " -- Date: " + today + " -- Balance: " + "£" + currentB);
 
   };
