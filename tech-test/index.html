@@ -3,17 +3,24 @@
   <head>
     <title>Bank</title>
   </head>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <body>
     <section>
+      <center>
       <h1> Bank </h1>
       <p>
-        <input type="number" name="amount" value="value">
-        <button id="Depisit">Deposit</button>
+        <input type="number" name="amount" value="0" min="0" id="value" >
+      </p>
+      <h2>  Balance: <span id="currentbal"></span> </h2>
+      <p>
+        <button id="Deposit">Deposit</button>
         <button id="Withdraw">Withdraw</button>
         <button id="Balance">Balance</button>
       </p>
+    </center>
     </section>
     <script src="src/Bank.js"></script>
   </body>
 </html>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="JS/jquery.js"></script>

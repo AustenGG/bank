@@ -6,7 +6,7 @@ function Bank() {
  }
 
   Bank.prototype.getCurrentBalance = function() {
-    return this.balance;
+    return "£" + this.balance;
   };
   Bank.prototype.deposit = function(value) {
      this.balance += value;
