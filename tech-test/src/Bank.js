@@ -25,7 +25,7 @@ function Bank() {
     return this.Transactions;
   };
 
-  Bank.prototype.addTransactions = function(transactionType) {
+  Bank.prototype.addTransactions = function(transactionType, amount) {
     var currentB = this.balance;
     var today = new Date();
     var dd = today.getDate();
@@ -41,6 +41,6 @@ function Bank() {
     }
     today = dd + '/' + mm + '/' + yyyy;
 
-    this.Transactions.push("Transaction method: " + transactionType + " -- Date: " + today + " -- Balance: " + "£" + currentB);
+    this.Transactions.push("Transaction method: " + transactionType + " -- Amount: " +  amount + " -- Date: " + today + " -- Balance: " + "£" + currentB);
 
   };
